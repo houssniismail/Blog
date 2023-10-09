@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: 1em sans-serif;
+}
+
+.logo{
+    height: 60px;
+}
+
+.navbar{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+    border: solid 1px rgba(0, 0, 0, 0.292);
+}
+
+.navbar_icons li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar_icons li a{
+    text-decoration: none;
+}
+
+.navbar_icons li :hover{
+    background-color: rgba(0, 0, 0, 0.317);
+    border-radius: 10px;
+}
+
+.navbar_icons{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 77vh;
+    margin-left: 25%;
+    
+}
+
+.container_post{
+    border: solid 1px rgba(0, 0, 0, 0.292);
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (max-width: 767px) {
+    .navbar_icons{
+        display: none;
+    }
+}
