@@ -34,31 +34,22 @@
             </li>
         </div>
     </div>
-    <div >
+    <div>
         <div class="container_add_post">
             <div class="container_add_post_int">
-                <h1>post</h1>
-                <form name="form1" method="POST" action="/post/add" enctype="multipart/form-data">
+                <h1 class="titreForm">ajouter catigorie</h1>
+                <form name="form1" method="POST" action="/categorie/add">
                     <table>
                         <tr>
-                            <td>titre</td>
-                            <td><input type="text" placeholder="titre ..." name="titre"></td>
+                            <td><span>titre</span><input class="input" type="text" placeholder="titre ..." name="titre"></td>
                         </tr>
                         <tr>
-                            <td>description</td>
-                            <td><textarea name="description" placeholder="text ..." id="" cols="30" rows="5"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td>image</td>
-                            <td><input type="file" name="image"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><input type="submit" value="Save"></td>
+                            <td colspan="2"><input class="submit" type="submit" value="ajouter"></td>
                         </tr>
                     </table>
                 </form>
             </div>
-            </div>
+        </div>
     </div>
 </body>
 

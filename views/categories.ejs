@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/categorie.css">
+
+
+  <title>home</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <div>
+      <img src="/images/logo.png" alt="" class="logo">
+    </div>
+    <div class="navbar_icons">
+      <li>
+        <svg xlink:href="" width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <a href="/addPost">
+            <path
+              d="m15.232 5.232 3.536 3.536m-2.036-5.036a2.5 2.5 0 0 1 3.536 3.536L6.5 21.036H3v-3.572L16.732 3.732Z">
+            </path>
+          </a>
+        </svg>
+      </li>
+      <li>
+        <svg width="30" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.001 6.001 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0H9m6 0v1a3 3 0 0 1-6 0v-1">
+          </path>
+        </svg>
+      </li>
+    </div>
+  </div>
+
+
+  <div class="container1">
+    <h1>
+      <%= title %>
+    </h1>
+    <div class="category">
+    <% data.forEach(function (item) { %>
+      <div class="container_post">
+        <div class="titre_post">
+          <p>
+            <%= item.id %>
+          </p>
+        </div>
+        <div class="titre_post">
+          <p>
+            <%= item.titre %>
+          </p>
+        </div>
+        <div>
+          <a href="/blog/<%= item.id %>">show</a>
+        </div>
+        <form method="post" action="/categorie/delete">
+          <input type="text" name="id" value="<%= item.id %>" id="id">
+          <input type="submit" value="Delete">
+        </form>              
+      </div>
+      <% })%>
+    </div>
+  </div>
+
+</body>
+
+</html>
